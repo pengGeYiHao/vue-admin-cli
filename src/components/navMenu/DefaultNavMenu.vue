@@ -44,6 +44,11 @@
             url:'/navmenu3',
             icon:'el-icon-date'
           },
+          {
+            name:'预览pdf',
+            url:'/testpdf',
+            icon:'el-icon-date'
+          },
         ]
       }
     },

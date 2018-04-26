@@ -16,6 +16,8 @@ const Test = resolve => require(['@/components/Main/NavMenu1/Test'],resolve)
 const NavMenu2 = resolve => require(['@/components/Main/NavMenu2'],resolve)
 // ---菜单3---
 const NavMenu3 = resolve => require(['@/components/Main/NavMenu3'],resolve)
+// ---预览pdf---
+const TestPdf = resolve => require(['@/components/Main/TestPdf'],resolve)
 
 
 
@@ -60,6 +62,11 @@ const routes = [
         path:'navmenu3',
         component:NavMenu3,
         name:'菜单3',
+      },
+      {
+        path:'testpdf',
+        component:TestPdf,
+        name:'预览pdf',
       },
     ],
   },
