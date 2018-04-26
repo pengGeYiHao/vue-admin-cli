@@ -6,6 +6,7 @@ import VueResource from 'vue-resource'
 import { sync } from 'vuex-router-sync'
 import ElementUI from 'element-ui'
 import draggable from 'vuedraggable'
+import ViserVue from 'viser-vue'
 
 
 import 'element-ui/lib/theme-chalk/index.css';
@@ -23,6 +24,7 @@ Vue.config.productionTip = false
 Vue.use(Vuex)
 Vue.use(VueResource)
 Vue.use(ElementUI)
+Vue.use(ViserVue)
 Vue.component('el-draggable', draggable)
 
 Vue.http.interceptors.push(function (request,next){

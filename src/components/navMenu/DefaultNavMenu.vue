@@ -44,96 +44,6 @@
             url:'/navmenu3',
             icon:'el-icon-date'
           },
-          {
-            name:'菜单2',
-            url:'/navmenu2',
-            icon:'el-icon-date',
-          },
-          {
-            name:'菜单3',
-            url:'/navmenu3',
-            icon:'el-icon-date'
-          },
-          {
-            name:'菜单2',
-            url:'/navmenu2',
-            icon:'el-icon-date',
-          },
-          {
-            name:'菜单3',
-            url:'/navmenu3',
-            icon:'el-icon-date'
-          },
-          {
-            name:'菜单2',
-            url:'/navmenu2',
-            icon:'el-icon-date',
-          },
-          {
-            name:'菜单3',
-            url:'/navmenu3',
-            icon:'el-icon-date'
-          },
-          {
-            name:'菜单2',
-            url:'/navmenu2',
-            icon:'el-icon-date',
-          },
-          {
-            name:'菜单3',
-            url:'/navmenu3',
-            icon:'el-icon-date'
-          },
-          {
-            name:'菜单2',
-            url:'/navmenu2',
-            icon:'el-icon-date',
-          },
-          {
-            name:'菜单3',
-            url:'/navmenu3',
-            icon:'el-icon-date'
-          },
-          {
-            name:'菜单2',
-            url:'/navmenu2',
-            icon:'el-icon-date',
-          },
-          {
-            name:'菜单3',
-            url:'/navmenu3',
-            icon:'el-icon-date'
-          },
-          {
-            name:'菜单2',
-            url:'/navmenu2',
-            icon:'el-icon-date',
-          },
-          {
-            name:'菜单3',
-            url:'/navmenu3',
-            icon:'el-icon-date'
-          },
-          {
-            name:'菜单2',
-            url:'/navmenu2',
-            icon:'el-icon-date',
-          },
-          {
-            name:'菜单3',
-            url:'/navmenu3',
-            icon:'el-icon-date'
-          },
-          {
-            name:'菜单2',
-            url:'/navmenu2',
-            icon:'el-icon-date',
-          },
-          {
-            name:'菜单3',
-            url:'/navmenu3',
-            icon:'el-icon-date'
-          },
         ]
       }
     },
@@ -146,8 +56,6 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .defaultNavMenu {
-    margin-top: 60px;
-    box-sizing: border-box;
     height:100%;
   }
 </style>

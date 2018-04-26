@@ -3,7 +3,7 @@
     <el-container>
       <el-aside
         :width="$store.state.navMenuIsActive?'200px':'64px'"
-        style="background-color: rgb(238, 241, 246);font-weight: 800;position: relative;"
+        style="background-color: rgb(238, 241, 246);font-weight: 800;box-sizing: border-box;margin-top: 60px;"
       >
         <div
           v-if="$store.state.navMenuIsActive"

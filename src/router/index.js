@@ -6,19 +6,16 @@ const Login = resolve => require(['@/components/Login'],resolve)
 const Component404 = resolve => require(['@/components/common/Component404'],resolve)
 const NetworkAnomaly = resolve => require(['@/components/common/NetworkAnomaly'],resolve)
 
-//二级菜单组件
-// const HomeNavMenu = resolve => require(['@/components/navMenu/HomeNavMenu'],resolve)
-// const HomeDefaultNavMenu = resolve => require(['@/components/navMenu/HomeDefaultNavMenu'],resolve)
-
-//菜站位站位组件（面包屑）
-const NavMenu = resolve => require(['@/components/Main/NavMenu'],resolve)
-
-//侧着玩的
-// const NoData = resolve => require(['@/components/common/NoData'],resolve)
+//站位站位组件（面包屑）
+const SeatNavMenu = resolve => require(['@/components/navMenu/SeatNavMenu'],resolve)
 
 // ============================main 组件============================
 // ---test---
 const Test = resolve => require(['@/components/Main/NavMenu1/Test'],resolve)
+// ---菜单2---
+const NavMenu2 = resolve => require(['@/components/Main/NavMenu2'],resolve)
+// ---菜单3---
+const NavMenu3 = resolve => require(['@/components/Main/NavMenu3'],resolve)
 
 
 
@@ -39,7 +36,7 @@ const routes = [
     children:[
       {
         path:'navmenu1',
-        component:NavMenu,
+        component:SeatNavMenu,
         name:'菜单1',
         redirect: '/navmenu1/test',
         children:[
@@ -55,21 +52,13 @@ const routes = [
         ],
       },
       {
-        path: 'navmenu2',
-        redirect: '/navmenu2/1',
-      },
-      {
-        path:'navmenu2/:page',
-        component:Test,
+        path:'navmenu2',
+        component:NavMenu2,
         name:'菜单2',
       },
       {
-        path: 'navmenu3',
-        redirect: '/navmenu3/1',
-      },
-      {
-        path:'navmenu3/:page',
-        component:Test,
+        path:'navmenu3',
+        component:NavMenu3,
         name:'菜单3',
       },
     ],
