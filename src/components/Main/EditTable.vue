@@ -24,58 +24,86 @@
           >
           </el-table-column>
           <el-table-column
-            label="序号"
-            fixed="left"
-          >
-            <template slot-scope="scope">
-              1
-            </template>
-          </el-table-column>
-          <el-table-column
             label="标题1"
             fixed="left"
           >
             <template slot-scope="scope">
-              1
+              <div v-if="scope.row.type === 'add'">
+                <el-input v-if="showInput" v-model="addTableParams.t1"></el-input>
+                <i v-else class="el-icon-plus" @click="showInput = true"></i>
+              </div>
+              <div v-else>
+                {{scope.row.t1}}
+              </div>
             </template>
           </el-table-column>
           <el-table-column
             label="标题2"
             width="110">
             <template slot-scope="scope">
-              2
+              <div v-if="scope.row.type === 'add'">
+                <el-input v-if="showInput" v-model="addTableParams.t2"></el-input>
+              </div>
+              <div v-else>
+                {{scope.row.t2}}
+              </div>
             </template>
           </el-table-column>
           <el-table-column
             label="标题3"
             width="110">
             <template slot-scope="scope">
-              3
+              <div v-if="scope.row.type === 'add'">
+                <el-input v-if="showInput" v-model="addTableParams.t3"></el-input>
+              </div>
+              <div v-else>
+                {{scope.row.t3}}
+              </div>
             </template>
           </el-table-column>
           <el-table-column
             label="标题4"
             width="110">
             <template slot-scope="scope">
-              4
+              <div v-if="scope.row.type === 'add'">
+                <el-input v-if="showInput" v-model="addTableParams.t4"></el-input>
+              </div>
+              <div v-else>
+                {{scope.row.t4}}
+              </div>
             </template>
           </el-table-column>
           <el-table-column
             label="标题5">
             <template slot-scope="scope">
-              5
+              <div v-if="scope.row.type === 'add'">
+                <el-input v-if="showInput" v-model="addTableParams.t5"></el-input>
+              </div>
+              <div v-else>
+                {{scope.row.t5}}
+              </div>
             </template>
           </el-table-column>
           <el-table-column
             label="标题6">
             <template slot-scope="scope">
-              6
+              <div v-if="scope.row.type === 'add'">
+                <el-input v-if="showInput" v-model="addTableParams.t6"></el-input>
+              </div>
+              <div v-else>
+                {{scope.row.t6}}
+              </div>
             </template>
           </el-table-column>
           <el-table-column
             label="标题7">
             <template slot-scope="scope">
-              7
+              <div v-if="scope.row.type === 'add'">
+                <el-input v-if="showInput" v-model="addTableParams.t7"></el-input>
+              </div>
+              <div v-else>
+                {{scope.row.t7}}
+              </div>
             </template>
           </el-table-column>
           <el-table-column
@@ -85,9 +113,13 @@
           >
             <template slot-scope="scope">
               <div class="operation">
-                <el-button-group>
-                  <el-button type="primary" size="mini" @click="operationHandle1">操作1</el-button>
-                  <el-button type="primary" size="mini" @click="operationHandle2">操作2</el-button>
+                <el-button-group v-if="scope.row.type==='add' && showInput">
+                  <el-button type="primary" size="mini" @click="saveAddHandle">保存</el-button>
+                  <el-button type="primary" size="mini" @click="showInput = false">取消</el-button>
+                </el-button-group>
+                <el-button-group v-else-if="scope.row.type != 'add'">
+                  <el-button type="primary" size="mini">删除</el-button>
+                  <el-button type="primary" size="mini">编辑</el-button>
                 </el-button-group>
               </div>
             </template>
@@ -129,12 +161,12 @@
       width="50%"
       :before-close="dialogHandleClose">
       <template>
-        <div v-if="dialogTitle=='操作1'">
-          <BusinessConfig :formSubmit="formSubmit" :popData="popData" :dialogHandleClose="dialogHandleClose"></BusinessConfig>
-        </div>
-        <div v-if="dialogTitle=='操作2'">
-          <CallConfig :formSubmit="formSubmit" :popData="popData" :dialogHandleClose="dialogHandleClose"></CallConfig>
-        </div>
+        <!--<div v-if="dialogTitle=='操作1'">-->
+          <!--<BusinessConfig :formSubmit="formSubmit" :popData="popData" :dialogHandleClose="dialogHandleClose"></BusinessConfig>-->
+        <!--</div>-->
+        <!--<div v-if="dialogTitle=='操作2'">-->
+          <!--<CallConfig :formSubmit="formSubmit" :popData="popData" :dialogHandleClose="dialogHandleClose"></CallConfig>-->
+        <!--</div>-->
       </template>
     </el-dialog>
   </div>
@@ -168,7 +200,7 @@
     data() {
       return {
 
-        tableData: [1,2], //数据列表
+        tableData: [], //数据列表
         loading: false, //loading状态
         getListDefaultParams: { //获取列表数据默认参数    尽量在fetchData 里操作getListDefaultParams，其他地方不要操作，避免混乱
           pageSize:10, //每页条数
@@ -188,6 +220,17 @@
 
         batchOperation:'', //批量操作名称
         batchItems:[], //批量操作数据
+
+        addTableParams:{
+            t1:'',
+            t2:'',
+            t3:'',
+            t4:'',
+            t5:'',
+            t6:'',
+            t7:'',
+        },
+        showInput:false, //是否显示添加的input 默认不显示
       }
     },
     created() {
@@ -224,6 +267,20 @@
           let self = this
 //        this.loading = true
           console.log(this.getListDefaultParams)
+          let data = [{
+            t1:'1',
+            t2:'1',
+            t3:'1',
+            t4:'1',
+            t5:'1',
+            t6:'1',
+            t7:'1',
+          }] //这里需要后台返回
+          data.push({
+            type:'add'
+          })
+          this.tableData=data
+          this.showInput = false
 //        testService.getList(params, this, (res) => {
 //          let data = res.body.data.result
 //          if (data.status === 0) {
@@ -250,15 +307,21 @@
       handleCommand(command){
         this.batchOperation = command
       },
-      operationHandle1(data) {
-        this.dialogVisible = true
-        this.dialogTitle = '操作1'
-        this.popData = data
-      },
-      operationHandle2(data) {
-        this.dialogVisible = true
-        this.dialogTitle = '操作2'
-        this.popData = data
+//      operationHandle1(data) {
+//        this.dialogVisible = true
+//        this.dialogTitle = '操作1'
+//        this.popData = data
+//      },
+//      operationHandle2(data) {
+//        this.dialogVisible = true
+//        this.dialogTitle = '操作2'
+//        this.popData = data
+//      },
+      saveAddHandle(){
+        console.log(this.addTableParams)
+        //这里发送添加请求，成功后获取列表数据
+        this.fetchData()
+
       },
       batchOperationHandel(){
         //这里发送批量操作请求
@@ -285,4 +348,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .el-icon-plus {
+    cursor: pointer;
+  }
 </style>
