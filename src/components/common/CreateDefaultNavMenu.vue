@@ -81,6 +81,7 @@
     height: 100%;
     overflow-y: scroll;
     background-color: #202327;
+    text-align: left;
   }
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;

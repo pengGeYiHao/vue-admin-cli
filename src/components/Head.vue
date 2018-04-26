@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex;justify-content: space-between;font-size: 12px" id="admin_head">
+  <div style="display: flex;justify-content: space-between;font-size: 12px" id="admin_head" class="admin_head">
     <div>
       <i v-if="$store.state.navMenuIsActive" class="el-icon-close" style="margin-right: 15px" @click="hideNavMenuHandle"></i>
       <i v-else class="el-icon-tickets" style="margin-right: 15px" @click="showNavMenuHandle"></i>
@@ -57,4 +57,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .admin_head {
+    padding:0 20px;
+  }
 </style>

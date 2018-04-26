@@ -23,6 +23,7 @@
       <el-container>
         <el-header>
           <Head></Head>
+          <Breadcrumb></Breadcrumb>
         </el-header>
         <el-main>
           <router-view></router-view>
@@ -35,11 +36,16 @@
 <script>
   import Head from '@/components/Head'
   import DefaultNavMenu from '@/components/navMenu/DefaultNavMenu'
+
+  // 面包屑
+  import Breadcrumb from '@/components/common/Breadcrumb'
+
   export default {
     name: 'layout',
     components: {
       Head,
-      DefaultNavMenu
+      DefaultNavMenu,
+      Breadcrumb
     },
     data() {
       return {}
@@ -57,6 +63,7 @@
     line-height: 60px;
     border-bottom: 1px solid #dddfdf;
     margin-bottom: 45px;
+    padding:0px;
   }
 
   .el-aside {

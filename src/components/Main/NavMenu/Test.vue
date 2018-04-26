@@ -1,6 +1,5 @@
 <template>
   <div class="test" id="test">
-    <Breadcrumb></Breadcrumb>
     <TestSearchForm :fetchData="fetchData" :formData="getListDefaultParams"></TestSearchForm>
     <div
       v-loading="loading"
@@ -144,9 +143,6 @@
 <script>
   import testService from '@/service/navMenu1/testService'
   import {getTime, formatTimeYYMMDD} from '@/utils'
-
-  // 面包屑
-  import Breadcrumb from '@/components/common/Breadcrumb'
   // 无数据时组件
   import NoData from '@/components/common/NoData'
   //搜索栏
@@ -160,7 +156,6 @@
   export default {
     name: 'test',
     components: {
-      Breadcrumb,
       NoData,
       BusinessConfig,
       CallConfig,

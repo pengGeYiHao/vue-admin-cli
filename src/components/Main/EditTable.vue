@@ -1,6 +1,5 @@
 <template>
   <div class="editTable" id="editTable">
-    <Breadcrumb></Breadcrumb>
     <TestSearchForm :fetchData="fetchData" :formData="getListDefaultParams"></TestSearchForm>
     <div
       v-loading="loading"
