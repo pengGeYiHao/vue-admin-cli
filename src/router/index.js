@@ -74,6 +74,10 @@ const routes = [
       },
       {
         path:'edittable',
+        redirect: '/edittable/1',
+      },
+      {
+        path:'edittable/:page',
         component:EditTable,
         name:'编辑单元格',
       },
