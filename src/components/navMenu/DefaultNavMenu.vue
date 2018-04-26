@@ -16,37 +16,39 @@
 
         routeItems:[  //测试  系统首页路由
           {
-            name:'菜单1',
-            url:'/navmenu1',
+            name:'菜单',
+            url:'/navmenu',
             icon:'el-icon-date',
             child:[
               {
-                name:'测试',
-                url:'/navmenu1/test',
-//                icon:'',
-//                child:[
-//                  {
-//                    name:'lala',
-//                    url:'/systemhome/home/system/3',
-//                    icon:'',
-//                  },
-//                ]
+                name:'普通页',
+                url:'/navmenu/test',
               },
             ]
           },
           {
-            name:'菜单2',
-            url:'/navmenu2',
+            name:'线性图',
+            url:'/lineimg',
             icon:'el-icon-date',
           },
           {
-            name:'菜单3',
-            url:'/navmenu3',
+            name:'饼状图',
+            url:'/cakeimg',
             icon:'el-icon-date'
           },
           {
             name:'预览pdf',
             url:'/testpdf',
+            icon:'el-icon-date'
+          },
+          {
+            name:'编辑单元格',
+            url:'/edittable',
+            icon:'el-icon-date'
+          },
+          {
+            name:'富文本编辑器',
+            url:'/quilleditor',
             icon:'el-icon-date'
           },
         ]

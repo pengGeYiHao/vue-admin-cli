@@ -7,6 +7,11 @@ import { sync } from 'vuex-router-sync'
 import ElementUI from 'element-ui'
 import draggable from 'vuedraggable'
 import ViserVue from 'viser-vue'
+import VueQuillEditor from 'vue-quill-editor/dist/ssr'
+// require styles
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 
 
 import 'element-ui/lib/theme-chalk/index.css';
@@ -25,6 +30,7 @@ Vue.use(Vuex)
 Vue.use(VueResource)
 Vue.use(ElementUI)
 Vue.use(ViserVue)
+Vue.use(VueQuillEditor)
 Vue.component('el-draggable', draggable)
 
 Vue.http.interceptors.push(function (request,next){

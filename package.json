@@ -19,6 +19,7 @@
     "viser-vue": "^2.2.3",
     "vue": "^2.5.2",
     "vue-pdf": "^3.2.2",
+    "vue-quill-editor": "^3.0.6",
     "vue-resource": "^1.5.0",
     "vue-router": "^3.0.1",
     "vuedraggable": "^2.16.0",
