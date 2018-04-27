@@ -41,7 +41,7 @@
       submitForm(){
         this.$refs.loginForm.validate((valid) => {
           if (valid) {
-            this.$router.push('/home')
+            this.$router.push('/navmenu')
           } else {
             return false;
           }
@@ -53,9 +53,14 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .login {
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .box-card {
     width: 50%;
-    margin: 200px auto;
   }
   .card-head {
     font-size: 20px;

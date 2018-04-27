@@ -55,3 +55,16 @@ export const formatTimeYYMMDD=function (timeAttr){
       let attr=[timeAttr[0],add0(timeAttr[1]),add0(timeAttr[2])]
       return attr.join('-')
 }
+
+/*检测一个对象是否有全部为空  返回true 全部为空*/
+export const isObjectKeysNull=function (obj){
+  let flag = true
+  let keys = Object.keys(obj)
+  for(let i=0; i< keys.length; i++){
+    if(obj[keys[i]]){
+      flag = false
+      break;
+    }
+  }
+  return flag;
+}

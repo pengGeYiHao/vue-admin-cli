@@ -146,7 +146,7 @@
   // 无数据时组件
   import NoData from '@/components/common/NoData'
   //搜索栏
-  import TestSearchForm from '@/components/searchForm/navMenu1/TestSearchForm'
+  import TestSearchForm from '@/components/searchForm/navMenu/TestSearchForm'
 
   //  弹窗
   import BusinessConfig from '@/components/dialog/navMenu1/test/BusinessConfig'

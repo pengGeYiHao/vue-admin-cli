@@ -5,11 +5,11 @@
       <i v-else class="el-icon-tickets" style="margin-right: 15px" @click="showNavMenuHandle"></i>
     </div>
     <div style="display: flex;flex-direction: row;align-items: center;">
-      <el-dropdown style="display: flex;">
+      <el-dropdown style="display: flex;" @command="handleCommand">
         <i class="el-icon-setting" style="margin-right: 15px;color: #000;font-size: 20px;"></i>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>查看资料</el-dropdown-item>
-          <el-dropdown-item>退出</el-dropdown-item>
+          <el-dropdown-item command="showUserDetails">查看资料</el-dropdown-item>
+          <el-dropdown-item command="logout">退出</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
       <span>用户名</span>
@@ -49,6 +49,11 @@
           this.hideNavMenuHandle()
         }else if(document.documentElement.clientWidth>900 && this.$store.state.navMenuIsActive === false){
           this.showNavMenuHandle()
+        }
+      },
+      handleCommand(command){
+        if(command === 'logout'){
+          this.$router.push('/login')
         }
       }
     }

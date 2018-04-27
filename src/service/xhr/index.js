@@ -42,7 +42,7 @@ export default function (that,url,method,params,cb){
             }
             cb(res)
         },(err)=>{
-          let route = that.$route.fullPath
+          // let route = that.$route.fullPath
           console.log(err.status)
           new Error(err)
         })

@@ -11,7 +11,7 @@ const SeatNavMenu = resolve => require(['@/components/navMenu/SeatNavMenu'],reso
 
 // ============================main 组件============================
 // ---普通页---
-const Test = resolve => require(['@/components/Main/NavMenu1/Test'],resolve)
+const Test = resolve => require(['@/components/Main/NavMenu/Test'],resolve)
 // ---线性图---
 const LineImg = resolve => require(['@/components/Main/LineImg'],resolve)
 // ---饼状图---
@@ -74,10 +74,6 @@ const routes = [
       },
       {
         path:'edittable',
-        redirect: '/edittable/1',
-      },
-      {
-        path:'edittable/:page',
         component:EditTable,
         name:'编辑单元格',
       },
