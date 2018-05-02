@@ -1,5 +1,5 @@
 <template>
-  <div id="navMenu2" class="navMenu2">
+  <div id="lineImg" class="lineImg">
     <v-chart :force-fit="true" :height="height" :data="data" :scale="scale">
       <v-tooltip />
       <v-axis />
@@ -45,7 +45,7 @@
   }];
 
   export default {
-    name: 'navMenu2',
+    name: 'lineImg',
     data() {
       return {
         data,

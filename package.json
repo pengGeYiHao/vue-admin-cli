@@ -16,6 +16,8 @@
   "dependencies": {
     "@antv/data-set": "^0.8.7",
     "element-ui": "^2.3.6",
+    "g2": "^2.3.13",
+    "g2-plugin-slider": "^1.2.1",
     "viser-vue": "^2.2.3",
     "vue": "^2.5.2",
     "vue-pdf": "^3.2.2",

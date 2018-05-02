@@ -1,5 +1,5 @@
 <template>
-  <div id="navMenu3" class="navMenu3">
+  <div id="cakeImg" class="cakeImg">
     <v-chart :forceFit="true" :height="height" :data="data" :scale="scale">
       <v-tooltip :showTitle="false" dataKey="item*percent" />
       <v-axis />
@@ -37,7 +37,7 @@
   const data = dv.rows;
 
   export default {
-    name:'navMenu3',
+    name:'cakeImg',
     data() {
       return {
         data,

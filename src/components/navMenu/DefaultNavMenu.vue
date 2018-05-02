@@ -32,6 +32,11 @@
             icon:'el-icon-date',
           },
           {
+            name:'slider线性图',
+            url:'/sliderlineimg',
+            icon:'el-icon-date',
+          },
+          {
             name:'饼状图',
             url:'/cakeimg',
             icon:'el-icon-date'

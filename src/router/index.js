@@ -14,6 +14,8 @@ const SeatNavMenu = resolve => require(['@/components/navMenu/SeatNavMenu'],reso
 const Test = resolve => require(['@/components/Main/NavMenu/Test'],resolve)
 // ---线性图---
 const LineImg = resolve => require(['@/components/Main/LineImg'],resolve)
+// ---slider线性图---
+const SliderLineImg = resolve => require(['@/components/Main/SliderLineImg'],resolve)
 // ---饼状图---
 const CakeImg = resolve => require(['@/components/Main/CakeImg'],resolve)
 // ---预览pdf---
@@ -66,6 +68,11 @@ const routes = [
         path:'cakeimg',
         component:CakeImg,
         name:'饼状图',
+      },
+      {
+        path:'sliderlineimg',
+        component:SliderLineImg,
+        name:'slider线性图',
       },
       {
         path:'testpdf',
