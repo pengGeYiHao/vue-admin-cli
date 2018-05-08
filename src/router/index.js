@@ -16,6 +16,8 @@ const Test = resolve => require(['@/components/Main/NavMenu/Test'],resolve)
 const LineImg = resolve => require(['@/components/Main/LineImg'],resolve)
 // ---slider线性图---
 const SliderLineImg = resolve => require(['@/components/Main/SliderLineImg'],resolve)
+// ---slider线性直方图---
+const Histogram = resolve => require(['@/components/Main/Histogram'],resolve)
 // ---饼状图---
 const CakeImg = resolve => require(['@/components/Main/CakeImg'],resolve)
 // ---预览pdf---
@@ -25,6 +27,10 @@ const EditTable = resolve => require(['@/components/Main/EditTable'],resolve)
 // ---富文本编辑器---
 const QuillEditor = resolve => require(['@/components/Main/QuillEditor'],resolve)
 
+
+// study g2.js
+
+const G21 = resolve => require(['@/components/Main/G2/Test'],resolve)
 
 
 Vue.use(Router)
@@ -75,6 +81,11 @@ const routes = [
         name:'slider线性图',
       },
       {
+        path:'sliderhistogram',
+        component:Histogram,
+        name:'slider直方图',
+      },
+      {
         path:'testpdf',
         component:TestPdf,
         name:'预览pdf',
@@ -88,6 +99,19 @@ const routes = [
         path:'quilleditor',
         component:QuillEditor,
         name:'富文本编辑器',
+      },
+      {
+        path:'studyg2',
+        component:SeatNavMenu,
+        name:'学习g2',
+        redirect: '/studyg2/test1',
+        children:[
+          {
+            path:'test1',
+            component:G21,
+            name:'one',
+          },
+        ],
       },
     ],
   },

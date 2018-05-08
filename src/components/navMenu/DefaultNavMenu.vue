@@ -37,6 +37,11 @@
             icon:'el-icon-date',
           },
           {
+            name:'slider直方图',
+            url:'/sliderhistogram',
+            icon:'el-icon-date',
+          },
+          {
             name:'饼状图',
             url:'/cakeimg',
             icon:'el-icon-date'
@@ -55,6 +60,17 @@
             name:'富文本编辑器',
             url:'/quilleditor',
             icon:'el-icon-date'
+          },
+          {
+            name:'学习g2',
+            url:'/studyg2',
+            icon:'el-icon-date',
+            child:[
+              {
+                name:'test1',
+                url:'/studyg2/test1',
+              },
+            ]
           },
         ]
       }
